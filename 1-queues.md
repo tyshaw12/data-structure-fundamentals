@@ -72,7 +72,7 @@ As you can see, using a list and .pop(0) removes the first element in the queue.
 - `.pop(0)` - Pops out the last item in the list
 
 ## Build a FIFO Queue Using Queue Module (First-In_Last_Out)
-The easiest way to make a queue in Python would be to use the Queue built-in module. This allows you to use knowledge from the list data structure but still have the performance that queues offer. To implement this we will be building a FIFO queue using the Queue module. We will use multiple functions listed below the example code to build this queue. This queue does have a maxsize constraint so if you want something without a maxsize constraint you can use 'queue.SimpleQueue'.
+The easiest way to make a queue in Python would be to use the Queue built-in module. This allows you to use knowledge from the list data structure but still have the performance that queues offer. To implement this we will be building a FIFO queue using the Queue module. We will use multiple functions listed below the example code to build this queue. This queue does have a maxsize constraint so if you want something without a maxsize constraint you can use 'queue.SimpleQueue()'.
 
 ```python 
 # This is a simple FIFO queue
@@ -235,7 +235,60 @@ Queue is empty: True
 - `.get()` - Dequeues item from queue
 
 ## Build a LIFO Queue Using Queue Module (Last-In-First-Out)
-Luckily, using the queue module helps us considerably when building a LIFO queue. Typically you would have to build a queue 
+Luckily, using the queue module helps us considerably when building a LIFO queue. This lets us use all the same things as earlier in the FIFO queue but just automatically changes it to LIFO. Normally a LIFO queue would include recursion or some odd forms of list ordering. queue.LifoQueue() allows us to use all the knowledge gathered from the FIFO queue and just implement it automatically into the LIFO queue. This tutorial will be a bit shorter because it's the same concepts reused.
 
+```python 
+# This is a simple FIFO queue
 
-## Problem to Solve
+# Import queue from Queue to use queue functions
+from queue import LifoQueue
+
+# Define the maxsize of the queue and intitialize it
+Q = LifoQueue(maxsize = 5)
+
+# Check if queue is empty
+empty = (Q.empty())
+print(f"Queue is empty: {empty} ")
+
+# Blank line for spacing
+print()
+
+# Queue elements
+Q.put('a')
+Q.put('b')
+Q.put('c')
+Q.put('d')
+Q.put('e')
+
+full = (Q.full())
+print(f"Queue is full: {full} ")
+print()
+print(f'Elements dequeued: ')
+print(Q.get())
+
+```
+As you can see in this example, the final output, 'e' is the last thing dequeued. You can also see that e was the last thing that was entered into the queue. Therefore, this queue is LIFO. The last thing in was the first thing out.
+
+Output:
+
+Queue is empty: True
+
+Queue is full: True
+
+Elements dequeued:
+
+e
+
+## Problem to Solve: FIFO with names
+
+Write a program that builds a FIFO queue that utilizes names and their order. Use the following names, 'Bob', 'Sue', 'Jeff'.
+
+Make a program where Bob comes first in the queue, is used twice, then placed behind Jeff. Sue should come after the second Bob then utilize Jeff 3 times before Bob comes again. The queue should have a maxsize of 5 so that Bob is forced to be recycled. Without the maxsize constraint you could just add Bob to the end instead of ordering it properly. When adding items to the list, make sure you are filling it up before removing anything (queue.full?). At the end make sure to verify the queue is empty as well. When you remove items from the queue make sure you are using the print([your funtion here]) so that you can see the names when they are taken out. The order they should be in is: 
+
+|| Bob, Bob, Sue, Jeff, Jeff, Jeff, Bob ||
+
+Try your best to work through the solution before looking at it below. Everything in this problem has been covered above so if you get stuck try reading through the material again first.
+
+- [Solution](1-solution.py)
+
+- [Back to Welcome Page](intro.md)

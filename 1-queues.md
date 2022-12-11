@@ -285,7 +285,7 @@ Write a program that builds a FIFO queue that utilizes names and their order. Us
 
 Make a program where Bob comes first in the queue, is used twice, then placed behind Jeff. Sue should come after the second Bob then utilize Jeff 3 times before Bob comes again. The queue should have a maxsize of 5 so that Bob is forced to be recycled. Without the maxsize constraint you could just add Bob to the end instead of ordering it properly. When adding items to the list, make sure you are filling it up before removing anything (queue.full?). At the end make sure to verify the queue is empty as well. When you remove items from the queue make sure you are using the print([your funtion here]) so that you can see the names when they are taken out. The order they should be in is: 
 
->! Bob, Bob, Sue, Jeff, Jeff, Jeff, Bob
+! Bob, Bob, Sue, Jeff, Jeff, Jeff, Bob
 
 Try your best to work through the solution before looking at it below. Everything in this problem has been covered above so if you get stuck try reading through the material again first.
 

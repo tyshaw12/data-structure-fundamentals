@@ -110,7 +110,6 @@ In a Python list you can search two different ways. Way 1 is using an index. Thi
 ### Diagram of a Hash List
 
 ![Hash List](hash.png)
-From https://en.wikipedia.org/wiki/Hash_list
 
 This hash list allows a computer to know exactly what hash a string of data sits on. Therefore using a performance of O(1).
 

@@ -3,8 +3,7 @@
 ## Queue Tutorial
 
 ## Introduction
-Python Queues are very useful in circumstances where you need to enter an item into a linear data structure that can keep ordering of items
-and use different approaches to remove or populate it. 
+Python Queues are very useful in circumstances where you need to enter an item into a linear data structure that can keep ordering of items.
 
 Another great use of queues is for performance. Queues have extremely good performance when compared to things like append and pop in a list. While looking through a list with append or pop is around O(n), a queue is typically O(1) depending on what approach you're taking with the queue.
 
@@ -238,7 +237,7 @@ Queue is empty: True
 Luckily, using the queue module helps us considerably when building a LIFO queue. This lets us use all the same things as earlier in the FIFO queue but just automatically changes it to LIFO. Normally a LIFO queue would include recursion or some odd forms of list ordering. queue.LifoQueue() allows us to use all the knowledge gathered from the FIFO queue and just implement it automatically into the LIFO queue. This tutorial will be a bit shorter because it's the same concepts reused.
 
 ```python 
-# This is a simple FIFO queue
+# This is a simple LIFO queue
 
 # Import queue from Queue to use queue functions
 from queue import LifoQueue

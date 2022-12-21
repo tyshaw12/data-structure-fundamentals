@@ -7,7 +7,6 @@ Trees are just linked lists connected together by pointers. Trees are especially
 
 ### Tree Example Pt. 1: Root with Children
 At the top you'd have the company. Let's use Dr. Pepper. Dr. Pepper makes the following sodas, 'Dr. Pepper', 'Dr. Pepper Zero Sugar', 'Dr. Pepper Vanilla'... and others. So you'd have a parents tree containing Dr. Pepper the company with branches leading down to each different soda. 
-
 ![Tree One](pepper1.png)
 
 ### Tree Example Pt. 2: Children with Children
@@ -113,14 +112,14 @@ print('Size of tree :', root.size)
 print('Height of tree :', root.height)
 
 ```
-
+```python
 Output:
 
 Binary tree : 
   6
  / \
 9   12
-
+```
 
 List of nodes : [Node(6), Node(9), Node(12)]
 
@@ -157,7 +156,7 @@ print('Binary tree from list :\n',
 print('\nList from binary tree :', 
       binary_tree.values)
 ```
-
+```python
 Output:
 
 Binary tree from list :
@@ -170,7 +169,7 @@ Binary tree from list :
 
 
 List from binary tree : [2, 4, 6, 8, None, 10, 14]
-
+```
 In this example, a tree is built off of a list. This is a much easier way to build trees and stops some human error along the way.
 
 
@@ -212,6 +211,7 @@ del root[4]
 root.pprint(index=True)
 print()
 ```
+```python
 Output:
 Base tree:
   ____1
@@ -254,7 +254,7 @@ Tree 4 (No 6th Node):
    _0-1_
   /     \
 1-2     2-3
-
+```
 As you can see from prints 2-4 the first change to the base tree was printing the index values (first number is the value, second number is the index). The next operation was replacing and appending node 6. Then, the last operation was deleting the 6th node entirely.
 
 ## Problem to Solve: Building the Binary Tree

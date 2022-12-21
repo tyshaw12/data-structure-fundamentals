@@ -7,6 +7,7 @@ Trees are just linked lists connected together by pointers. Trees are especially
 
 ### Tree Example Pt. 1: Root with Children
 At the top you'd have the company. Let's use Dr. Pepper. Dr. Pepper makes the following sodas, 'Dr. Pepper', 'Dr. Pepper Zero Sugar', 'Dr. Pepper Vanilla'... and others. So you'd have a parents tree containing Dr. Pepper the company with branches leading down to each different soda. 
+
 ![Tree One](pepper1.png)
 
 ### Tree Example Pt. 2: Children with Children
